@@ -17,7 +17,8 @@
   --coral:     #FF6B57;   /* speak actions, sound-arcs, active strip */
   --coral-press:#E0503D;
   --coral-ink: #2A0E09;   /* text on coral (AA on #FF6B57) */
-  --danger:    #E0503D;
+  --danger:    #FF7A66;   /* AA as text on navy bg (6.85:1) and tile (5.49:1) */
+  --danger-ink:#2A0E09;   /* dark text on the light-red danger fill (7.06:1) */
 
   /* Fitzgerald key edge-stripes (muted, 4px) — mirrors data/corpus.js FITZ */
   --fitz-people:     #C9A227;
@@ -48,10 +49,11 @@
     --line:      #16263E;  /* navy borders */
     --ink:       #16263E;  /* navy text */
     --ink-dim:   #4A5A70;
-    --coral:     #E0503D;  /* darker coral for AA on paper */
-    --coral-press:#C23E2C;
+    --coral:     #C13B27;  /* darker coral: AA as white-on (5.35) and on-paper text (4.97) */
+    --coral-press:#A83322;
     --coral-ink: #FFFFFF;
     --danger:    #C23E2C;
+    --danger-ink:#FFFFFF;
     --shadow: 0 14px 34px -26px rgba(22,38,62,0.4);
   }
 }
@@ -268,7 +270,7 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 18px 16px 40px; }
 .btn--primary:hover { background: var(--coral-press); }
 .btn--ghost { background: transparent; }
 .btn--danger { background: transparent; color: var(--danger); border-color: var(--danger); }
-.btn--danger:hover { background: var(--danger); color: #fff; }
+.btn--danger:hover { background: var(--danger); color: var(--danger-ink); }
 .btn--full { width: 100%; margin-top: 6px; }
 .btn--sm { padding: 6px 12px; font-size: 0.85rem; }
 .btnrow { display: flex; gap: 8px; flex-wrap: wrap; }
