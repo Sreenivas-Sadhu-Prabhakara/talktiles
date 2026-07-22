@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="talktiles">
+  <rect width="32" height="32" rx="7" fill="#0E1A2B"/>
+  <rect x="5" y="7" width="16" height="16" rx="4.5" fill="#1B2C47" stroke="#2C3F5F" stroke-width="1"/>
+  <path d="M22 8a6 6 0 0 1 0 8"   fill="none" stroke="#FF6B57" stroke-width="2" stroke-linecap="round"/>
+  <path d="M25 5.5a10 10 0 0 1 0 13" fill="none" stroke="#FF6B57" stroke-width="2" stroke-linecap="round" opacity="0.62"/>
+  <path d="M28 3a14 14 0 0 1 0 18" fill="none" stroke="#FF6B57" stroke-width="2" stroke-linecap="round" opacity="0.38"/>
+</svg>

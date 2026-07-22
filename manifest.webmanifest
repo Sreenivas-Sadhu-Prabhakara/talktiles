@@ -1,0 +1,24 @@
+{
+  "name": "talktiles — free AAC communication board",
+  "short_name": "talktiles",
+  "description": "Tap big emoji tiles that speak aloud on your device, or chain them into a sentence. A free, private AAC communication board — no account, no cloud, works offline.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#0E1A2B",
+  "theme_color": "#0E1A2B",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

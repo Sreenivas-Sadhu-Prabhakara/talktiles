@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --bg: #0E1A2B; --tile: #1B2C47; --tile-dim: #172440; --line: #2C3F5F;
+    --ink: #F4EFE6; --ink-dim: #B9C3D2; --coral: #FF6B57;
+    --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", system-ui, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative; font-family: var(--sans); color: var(--ink);
+    background:
+      radial-gradient(900px 480px at 88% -12%, rgba(255,107,87,0.16), transparent 60%),
+      linear-gradient(180deg, #0c1626 0%, #0E1A2B 100%);
+    -webkit-font-smoothing: antialiased;
+  }
+  .frame { position: absolute; inset: 0; padding: 78px 84px; display: flex; flex-direction: column; justify-content: space-between; }
+
+  .brand { display: flex; align-items: center; gap: 20px; }
+  .brand svg { width: 74px; height: 74px; }
+  .wordmark { font-size: 60px; font-weight: 800; letter-spacing: -0.03em; }
+
+  .headline { max-width: 660px; }
+  .headline h1 { font-size: 62px; font-weight: 800; line-height: 1.08; letter-spacing: -0.025em; }
+  .headline .accent { color: var(--coral); }
+  .headline p { margin-top: 22px; font-size: 27px; font-weight: 500; color: var(--ink-dim); line-height: 1.35; max-width: 30ch; }
+
+  .chips { display: flex; gap: 12px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 20px; border: 1px solid var(--line); border-radius: 999px;
+    background: rgba(11,21,36,0.5); font-size: 22px; font-weight: 600; color: var(--ink-dim);
+  }
+  .chip .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 4px rgba(255,107,87,0.18); }
+
+  /* dimmed tile field on the right, with one coral tile mid-speech */
+  .field { position: absolute; right: -40px; top: 96px; width: 520px; display: grid; grid-template-columns: repeat(3, 150px); gap: 16px; opacity: 0.9; }
+  .t {
+    width: 150px; height: 150px; border-radius: 22px;
+    background: var(--tile-dim); border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center; font-size: 62px; position: relative;
+  }
+  .t.dim { opacity: 0.45; }
+  .t.live { background: rgba(255,107,87,0.16); border-color: var(--coral); }
+  .t .arcs { position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; }
+  .t .arcs path { fill: none; stroke: var(--coral); stroke-width: 4; stroke-linecap: round; }
+</style>
+</head>
+<body>
+  <!-- dimmed tile grid with one tile mid-speech -->
+  <div class="field" aria-hidden="true">
+    <div class="t dim">💧</div>
+    <div class="t live">🙂
+      <svg class="arcs" viewBox="0 0 24 24"><path d="M13 6a6 6 0 0 1 0 12"/><path d="M16 3a10 10 0 0 1 0 18"/><path d="M19 0a14 14 0 0 1 0 24"/></svg>
+    </div>
+    <div class="t dim">🍎</div>
+    <div class="t dim">❓</div>
+    <div class="t dim">🏠</div>
+    <div class="t dim">❤️</div>
+    <div class="t dim">👋</div>
+    <div class="t dim">💊</div>
+    <div class="t dim">✅</div>
+  </div>
+
+  <div class="frame">
+    <div class="brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <rect x="14" y="26" width="52" height="52" rx="14" fill="#1B2C47" stroke="#2C3F5F" stroke-width="2"/>
+        <rect x="26" y="42" width="20" height="20" rx="4" fill="#22345A"/>
+        <path d="M70 24a20 20 0 0 1 0 28" fill="none" stroke="#FF6B57" stroke-width="6" stroke-linecap="round"/>
+        <path d="M80 15a34 34 0 0 1 0 46" fill="none" stroke="#FF6B57" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+        <path d="M90 6a48 48 0 0 1 0 64" fill="none" stroke="#FF6B57" stroke-width="6" stroke-linecap="round" opacity="0.36"/>
+      </svg>
+      <span class="wordmark">talktiles</span>
+    </div>
+
+    <div class="headline">
+      <h1>Talking tiles that<br><span class="accent">speak for you.</span></h1>
+      <p>A free, private AAC communication board — no account, no cloud.</p>
+    </div>
+
+    <div class="chips">
+      <span class="chip"><span class="dot"></span>tap to speak</span>
+      <span class="chip"><span class="dot"></span>on your device</span>
+      <span class="chip"><span class="dot"></span>works offline</span>
+    </div>
+  </div>
+</body>
+</html>
